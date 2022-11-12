@@ -8,6 +8,20 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   application:
     name: userService
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      discovery:
+        cluster-name: CQ
+
+userService:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:10086/eureka
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
