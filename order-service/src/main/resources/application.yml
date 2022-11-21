@@ -13,9 +13,10 @@ spring:
       server-addr: localhost:8848
       discovery:
         cluster-name: CQ
-orderService:
+userService:
   ribbon:
     NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+
 
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
@@ -30,3 +31,8 @@ logging:
     cn.itcast: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50

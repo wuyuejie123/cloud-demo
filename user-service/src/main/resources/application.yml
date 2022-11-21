@@ -6,17 +6,10 @@ spring:
     username: lzl
     password: 12345qaz
     driver-class-name: com.mysql.jdbc.Driver
-  application:
-    name: userService
-  cloud:
-    nacos:
-      server-addr: localhost:8848
-      discovery:
-        cluster-name: CQ
-
-userService:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+#      discovery:
+#        cluster-name: CQ
+pattern:
+  name: application
 
 #eureka:
 #  client:

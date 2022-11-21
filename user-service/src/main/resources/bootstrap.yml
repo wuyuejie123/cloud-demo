@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: userService
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        file-extension: yaml
+
+
+pattern:
+  name: bootstrap
